@@ -41,5 +41,7 @@ python manage.py runserver          # запустить сервер
 ````
 
 ## 3 URL
-Сайт: ````http://localhost:8000/````
-Панель администратора: ````http://localhost:8000/admin/````
+
+Сайт: [a link](http://localhost:8000/) 
+
+Панель администратора: [a link](http://localhost:8000/admin/) 
