@@ -1,5 +1,6 @@
 from django import template
-from menu.models import Menu, MenuItem
+from menu.models import MenuItem
+from django.utils.safestring import mark_safe
 
 
 register = template.Library()
@@ -46,10 +47,10 @@ def _build_menu(slug, path):
     Функция для построения HTML макета меню 
     """
     inline = _build_menu_inline(slug, path)  
-    return f'<a href="/{slug}">{slug}</a><ul>{inline}</ul>'        
+    return f'<div><a href="/{slug}">{slug}</a><ul>{inline}</ul></div>'    
 
 
 @register.simple_tag(takes_context=True)
 def draw_menu(context, slug):
     path = context['request'].path[1:].split('-')
-    return _build_menu(slug, path)
+    return mark_safe(_build_menu(slug, path))
