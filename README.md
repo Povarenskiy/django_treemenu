@@ -22,6 +22,7 @@ poetry shell
 python manage.py migrate            # миграции в базу данных
 python manage.py createsuperuser    # создать администатора
 ...
+python manage.py test               # запустить тесты
 python manage.py runserver          # запустить сервер
 ````
 
@@ -29,4 +30,4 @@ python manage.py runserver          # запустить сервер
 
 Сайт: [http://localhost:8000/](http://localhost:8000/) 
 
-Панель администратора: [a link](http://localhost:8000/admin/) 
+Панель администратора: [http://localhost:8000/admin/](http://localhost:8000/admin/) 
